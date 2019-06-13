@@ -6,8 +6,13 @@ void exer1(){
 	int num = 100;
 	int i = 50;
 	while(num >= i){
-		printf(" %d,", num);
-		num--;
+        if(num == 50){
+            printf(" %d", num);
+        }
+        else{
+            printf(" %d,", num);
+        }
+        num--;
 	}
 }
 
@@ -24,25 +29,44 @@ void exer2(){
 			num++;
 		}
 	}
-}	
+} 	
 	//fixed
 	void exer3(){
-		int a,b, result,sum = 0;
+    int a,b, result,sum = 0;
 		printf("Enter first number: ");
 		scanf("%d", &a);
 		printf("Enter second number: ");
 		scanf("%d", &b);
         result = a;
-        while(a < b){
-            if(result == a){
-                sum++;
-                a++;
+        if(a < b){
+            while(a < b){
+                if(result == a){
+                    sum++;
+                    a++;
+                }
+                else{
+                    sum += a;
+			        a++;
+                }
             }
-            else{
-                sum += a;
-			    a++;
-            }
+            printf("The result is : %d", sum-1);
         }
+        else{
+            while(a > b){
+                if(result == a){
+                    a--;
+                }
+                else{
+                    sum += a;
+			        a--;
+                }
+            }
+            printf("The result is : %d", sum);
+
+        }
+    
+ 
+}
 
 
 printf("The result is : %d", sum-1);
@@ -65,7 +89,7 @@ printf("The result is : %d", sum-1);
 	}
 	
 	void exer4(){
-		int num, 
+    int num, 
 	result, 
 	tableLength, 
 	count = 1;
@@ -78,8 +102,8 @@ printf("The result is : %d", sum-1);
 		result = num * count;
 		printf(" %d x %d = %d \n", num,count,result);
 		count++;
-	}
-	}
+    }
+}
 	
 	void exer5(){
 		int num;
