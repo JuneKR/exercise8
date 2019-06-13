@@ -88,7 +88,7 @@ printf("The result is : %d", sum-1);
 //	printf("The result is : %d", result);
 	}
 	
-	void exer4(){
+void exer4(){
     int num, 
 	result, 
 	tableLength, 
