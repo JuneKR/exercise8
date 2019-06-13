@@ -24,15 +24,28 @@ void exer2(){
 			num++;
 		}
 	}
-}
+}	
+	//fixed
 	void exer3(){
-		int a,b, result;
+		int a,b, result,sum = 0;
 		printf("Enter first number: ");
 		scanf("%d", &a);
 		printf("Enter second number: ");
 		scanf("%d", &b);
-		result = a + b;
-		printf("The result is : %d", result);
+        result = a;
+        while(a < b){
+            if(result == a){
+                sum++;
+                a++;
+            }
+            else{
+                sum += a;
+			    a++;
+            }
+        }
+
+
+printf("The result is : %d", sum-1);
 	}
 	
 	void exer3_2(){
