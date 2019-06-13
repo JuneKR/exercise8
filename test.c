@@ -91,31 +91,32 @@ void exer2(){
 
 	}
 	exer5_2(){
-		int num,
-		key;
+		int num;
+    		char key;
 		
 		printf("======================================== \n");
 		printf("Wait for users input any key to start \n");
 		printf("or press 0 to stop :");
-		scanf("%d", &key);
-		
-		while(key != 0){
+		scanf("%c", &key);
+
+		while(key != '0' && key != 0){
 			
 			printf("Enter a number : ");
 			scanf("%d", &num);
-			if((num % 2) == 0){
-				printf(" %d is even number \n", num);
-			}
-			else if((num % 2) != 0){
-				printf(" %d is odd number \n", num);
-			}
-			else{
-				printf("Zero is ....");
-			}
+
+            if(num != 0){
+                if((num % 2) == 0){
+				    printf(" %d is even number \n", num);
+			    }
+			    else{
+				    printf(" %d is odd number \n", num);
+			    }
+            }else{
+                key = '0';
+            }
 			
-			printf("wait for any key \n");
-			scanf("%d", &key);
-		}
+
+            }
 	}
 	
 
